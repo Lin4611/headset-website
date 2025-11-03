@@ -141,12 +141,12 @@ function App() {
           </div>
         </section>
         <section
-          className="flex w-full flex-col gap-12 py-15 px-3 bg-no-repeat bg-cover bg-center"
+          className="flex w-full flex-col gap-12 py-15 px-3 items-center justify-between bg-no-repeat bg-cover bg-center lg:justify-center lg:px-[422px] lg:bg-none lg:bg-dark"
           style={{
             backgroundImage: `url(${sm_bg})`,
           }}
         >
-          <div className="w-full flex flex-col gap-2">
+          <div className="w-full flex flex-col gap-2 lg:items-center lg:justify-center">
             <h2 className="text-h2 text-white font-medium tracking-[2px] leading-tight">
               多色選擇，專屬你的與眾不同
             </h2>
@@ -154,7 +154,7 @@ function App() {
               我的風格我主張，獨創品牌限定色，除了耀眼更要獨一無二
             </p>
           </div>
-          <div className="flex flex-col w-full gap-6">
+          <div className="flex flex-col w-full gap-6 lg:hidden">
             <img
               src={item_1}
               alt="item1"
@@ -190,6 +190,51 @@ function App() {
               alt="item7"
               className="w-full h-[219px] object-cover"
             />
+          </div>
+          <div className="hidden lg:flex w-full h-[706px]">
+            <div className="flex flex-col gap-6 w-full">
+              <div className="flex justify-between gap-6 w-full max-w-[636px]">
+                <img
+                  src={item_1}
+                  alt="item1"
+                  className="w-full h-full max-w-[306px] max-h-[306px] object-cover"
+                />
+                <div className="flex flex-col w-full gap-6">
+                  <img
+                    src={item_2}
+                    alt="item1"
+                    className="w-full h-full max-w-[306px] max-h-[141px] object-cover"
+                  />
+                  <img
+                    src={item_3}
+                    alt="item1"
+                    className="w-full h-full max-w-[306px] max-h-[141px] object-cover"
+                  />
+                </div>
+              </div>
+              <img
+                src={item_4}
+                alt="item4"
+                className="w-full h-full max-w-[636px] max-h-[376px] object-cover"
+              />
+            </div>
+            <div className="flex flex-col justify-between items-center w-full gap-6 max-w-[416px]">
+              <img
+                src={item_5}
+                alt=""
+                className="w-full h-full object-cover max-w-[416px] max-h-[219px]"
+              />
+              <img
+                src={item_6}
+                alt=""
+                className="w-full h-full object-cover max-w-[416px] max-h-[219px]"
+              />
+              <img
+                src={item_7}
+                alt=""
+                className="w-full h-full object-cover max-w-[416px] max-h-[219px]"
+              />
+            </div>
           </div>
         </section>
       </main>
