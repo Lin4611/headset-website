@@ -18,6 +18,9 @@ import form_p_1 from "./assets/img/p-1.jpg";
 import form_p_2 from "./assets/img/p-2.jpg";
 import form_p_3 from "./assets/img/p-3.jpg";
 import form_p_4 from "./assets/img/p-4.jpg";
+import twitter from "./assets/img/icon/Twitter.svg";
+import ig from "./assets/img/icon/Instagram.svg";
+import fb from "./assets/img/icon/Facebook.svg";
 import { useEffect, useState } from "react";
 function App() {
   const [isDesktop, setIsDesktop] = useState(false);
@@ -347,6 +350,30 @@ function App() {
             </div>
           </div>
         </section>
+        <footer className="w-full flex flex-col bg-dark py-15 gap-6 px-3">
+          <section className="w-full flex flex-col gap-6">
+            <img src={logo} alt="logo" className="w-40 h-[66px] object-cover" />
+            <div className="flex justify-between max-w-[152px]">
+              <img
+                src={twitter}
+                alt="twitter"
+                className="w-6 h-6 object-cover"
+              />
+              <img src={ig} alt="instagram" className="w-6 h-6 object-cover" />
+              <img src={fb} alt="facebook" className="w-6 h-6 object-cover" />
+            </div>
+          </section>
+          <section className="flex justify-between max-w-60 mb-10">
+            <a href="#" className="text-white font-normal">最新商品</a>
+            <a href="#" className="text-white font-normal">多色選擇</a>
+            <a href="#" className="text-white font-normal">訂製耳機</a>
+          </section>
+          <section className="block">
+            <p className="text-white font-normal">
+              © WEBNAME 2024 All right Reserved
+            </p>
+          </section>
+        </footer>
       </main>
     </>
   );
