@@ -2,7 +2,7 @@ import logo from "./assets/img/icon/Logo.svg";
 import search_icon from "./assets/img/icon/Search.svg";
 import menu_icon from "./assets/img/icon/Justify-sm.svg";
 import sm_banner from "./assets/img/phone-pic/sm-banner.png";
-import banner from "./assets/img/lg-banner.jpg";
+import banner from "./assets/img/banner.png";
 import p_1 from "./assets/img/phone-pic/new-sm-1.png";
 import p_2 from "./assets/img/phone-pic/new-sm-2.png";
 import p_3 from "./assets/img/phone-pic/new-sm-3.png";
@@ -103,13 +103,10 @@ function App() {
             </div>
           </div>
         </section>
-        <section className="hidden lg:flex w-full bg-dark h-[634px] items-center px-[312px] relative">
-          <img
-            src={banner}
-            alt="banner"
-            className="w-[856px] h-[514px] object-cover"
-          />
-          <div className="z-10 w-[636px] h-[139px] flex flex-col px-3 gap-4 absolute left-[972px]">
+        <section className="hidden lg:flex w-full bg-dark h-[634px] justify-end items-center bg-center bg-cover bg-no-repeat max-w-[1920px] "
+        style={{backgroundImage:`url(${banner})`}}
+        >
+          <div className="w-[636px] h-[139px] flex flex-col px-3 gap-4 mr-[312px]">
             <h2 className="text-h1 font-medium text-white">INEAR PRO MAX</h2>
             <div className="w-full flex flex-col justify-between">
               <p className="text-white font-normal">
