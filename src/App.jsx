@@ -3,9 +3,8 @@ import search_icon from "./assets/img/icon/Search.svg";
 import menu_icon from "./assets/img/icon/Justify-sm.svg";
 import sm_banner from "./assets/img/phone-pic/sm-banner.png";
 import banner from "./assets/img/lg-banner.jpg";
-import bg_pic from "./assets/img/phone-pic/bg-sm.png";
 import p_1 from "./assets/img/phone-pic/new-sm-1.png";
-import p_2 from "./assets/img/phone-pic/new-sm-2.png"; 
+import p_2 from "./assets/img/phone-pic/new-sm-2.png";
 import p_3 from "./assets/img/phone-pic/new-sm-3.png";
 function App() {
   return (
@@ -62,7 +61,7 @@ function App() {
             </button>
           </section>
         </header>
-        <section className="w-full bg-dark py-12 h-[610px] flex relative lg:hidden">
+        <section className="flex lg:hidden w-full bg-dark py-12 h-[610px] relative">
           <img
             src={sm_banner}
             alt="banner"
@@ -99,22 +98,36 @@ function App() {
           </div>
         </section>
         <section
-          className="w-full h-auto flex flex-col items-center bg-hero gap-12 py-15"
-          style={{ "--hero-desktop": `url(${bg_pic})` }}
-        > 
-          
+          className="w-full flex flex-col items-center gap-12 py-15 bg-cover bg-center lg:bg-[#2b2b2b]"
+          style={{
+            backgroundImage:
+              "linear-gradient(to bottom, #000000, #404040, #191919)",
+          }}
+        >
           <h2 className="text-white text-h2 font-medium">最新商品</h2>
-          <div className="flex flex-col w-full px-3">
-            <figure className="w-full flex flex-col gap-2">
-              <img src={p_1} alt="p1" className="w-full h-auto object-cover aspect-squares" />
+          <div className="flex flex-col w-full px-3 lg:flex-row lg:px-[312px] lg:gap-6">
+            <figure className="w-full flex flex-col gap-2 lg:gap-6">
+              <img
+                src={p_1}
+                alt="p1"
+                className="w-full h-auto object-cover aspect-square"
+              />
               <p className="w-full font-medium text-white p-2">INEAR PRO II</p>
             </figure>
-            <figure className="w-full flex flex-col gap-2">
-              <img src={p_2} alt="p2" className="w-full h-auto object-cover aspect-squares" />
+            <figure className="w-full flex flex-col gap-2 lg:gap-6">
+              <img
+                src={p_2}
+                alt="p2"
+                className="w-full h-auto object-cover aspect-square"
+              />
               <p className="w-full font-medium text-white p-2">INEAR PRO MAX</p>
             </figure>
-            <figure className="w-full flex flex-col gap-2">
-              <img src={p_3} alt="p3" className="w-full h-auto object-cover aspect-squares" />
+            <figure className="w-full flex flex-col gap-2 lg:gap-6">
+              <img
+                src={p_3}
+                alt="p3"
+                className="w-full h-auto object-cover aspect-square"
+              />
               <p className="w-full font-medium text-white p-2">INEAR PRO I</p>
             </figure>
           </div>
