@@ -1,6 +1,8 @@
 import logo from "./assets/img/icon/Logo.svg";
 import search_icon from "./assets/img/icon/Search.svg";
 import menu_icon from "./assets/img/icon/Justify-sm.svg";
+import sm_banner from "./assets/img/phone-pic/sm-banner.png";
+import banner from "./assets/img/lg-banner.jpg"
 function App() {
   return (
     <>
@@ -56,6 +58,38 @@ function App() {
             </button>
           </section>
         </header>
+        <section className="w-full bg-dark py-12 h-[610px] flex relative lg:hidden">
+          <img
+            src={sm_banner}
+            alt="banner"
+            className="w-full h-[514px] object-cover absolute block"
+          />
+          <div className="z-10 w-full flex flex-col px-3 gap-4 absolute top-[399px]">
+            <h2 className="text-h1 font-medium text-white">INEAR PRO MAX</h2>
+            <div className="w-full flex flex-col justify-between">
+              <p className="text-white font-normal">
+                9/16 - 10/30 官網搶先販售
+              </p>
+              <p className="text-white font-normal">
+                新色上市，搭載最新降噪技術，提供給您最高音質享受，採用適應性演算法，快速處理音效，讓您享受更高傳真的效果。
+              </p>
+            </div>
+          </div>
+        </section>
+        <section className="hidden lg:flex w-full bg-dark h-[634px] items-center px-[312px] relative">
+          <img src={banner} alt="banner" className="w-[856px] h-[514px] object-cover" />
+           <div className="z-10 w-[636px] h-[139px] flex flex-col px-3 gap-4 absolute left-[972px]">
+            <h2 className="text-h1 font-medium text-white">INEAR PRO MAX</h2>
+            <div className="w-full flex flex-col justify-between">
+              <p className="text-white font-normal">
+                9/16 - 10/30 官網搶先販售
+              </p>
+              <p className="text-white font-normal">
+                新色上市，搭載最新降噪技術，提供給您最高音質享受，採用適應性演算法，快速處理音效，讓您享受更高傳真的效果。
+              </p>
+            </div>
+          </div>
+        </section>
       </main>
     </>
   );
