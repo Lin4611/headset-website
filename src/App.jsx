@@ -122,11 +122,15 @@ function App() {
           </div>
         </section>
         <section
-          className="w-full flex flex-col items-center gap-12 py-15 bg-cover bg-center lg:bg-[#2b2b2b]"
-          style={{
-            backgroundImage:
-              "linear-gradient(to bottom, #000000, #404040, #191919)",
-          }}
+          className="w-full flex flex-col items-center gap-12 py-15 bg-cover bg-center"
+          style={
+            isDesktop
+              ? { backgroundColor: "#2b2b2b" }
+              : {
+                  backgroundImage:
+                    "linear-gradient(rgb(0,0,0), rgb(64,64,64), rgb(25,25,25))",
+                }
+          }
         >
           <h2 className="text-white text-h2 font-medium">最新商品</h2>
           <div className="flex flex-col w-full px-3 lg:flex-row lg:px-[312px] lg:gap-6">
@@ -157,10 +161,14 @@ function App() {
           </div>
         </section>
         <section
-          className="flex w-full flex-col gap-12 py-15 px-3 items-center justify-between bg-no-repeat bg-cover bg-center lg:justify-center lg:px-[422px] lg:bg-none lg:bg-dark"
-          style={{
-            backgroundImage: `url(${sm_bg})`,
-          }}
+          className="flex w-full flex-col gap-12 py-15 px-3 items-center justify-between bg-no-repeat bg-cover bg-center lg:justify-center lg:px-[422px]"
+          style={
+            isDesktop
+              ? { backgroundColor: "#000000" }
+              : {
+                  backgroundImage: `url(${sm_bg})`,
+                }
+          }
         >
           <div className="w-full flex flex-col gap-2 lg:items-center lg:justify-center">
             <h2 className="text-h2 text-white font-medium tracking-[2px] leading-tight">
@@ -207,7 +215,7 @@ function App() {
               className="w-full h-[219px] object-cover"
             />
           </div>
-          <div className="hidden lg:flex w-full h-[706px]">
+          <div className="hidden lg:flex w-full h-[706px] gap-6">
             <div className="flex flex-col gap-6 w-full">
               <div className="flex justify-between gap-6 w-full max-w-[636px]">
                 <img
@@ -363,7 +371,7 @@ function App() {
               <img src={fb} alt="facebook" className="w-6 h-6 object-cover" />
             </div>
           </section>
-          <span className="bg-white h-px w-25 my-12"/>
+          <span className="bg-white h-px w-25 my-12" />
           <section className="flex flex-col lg:flex-row lg:w-full lg:justify-between">
             <section className="flex justify-between max-w-60 mb-10 lg:gap-6">
               <a href="#" className="text-white font-normal">
