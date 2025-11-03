@@ -18,7 +18,16 @@ import form_p_1 from "./assets/img/p-1.jpg";
 import form_p_2 from "./assets/img/p-2.jpg";
 import form_p_3 from "./assets/img/p-3.jpg";
 import form_p_4 from "./assets/img/p-4.jpg";
+import { useEffect, useState } from "react";
 function App() {
+  const [isDesktop, setIsDesktop] = useState(false);
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 768px)");
+    const handleChange = () => setIsDesktop(mediaQuery.matches);
+    handleChange();
+    mediaQuery.addEventListener("change", handleChange);
+    return () => mediaQuery.removeEventListener("change", handleChange);
+  }, []);
   return (
     <>
       <main className="mx-auto max-w-[1920px] w-full">
@@ -241,29 +250,102 @@ function App() {
             </div>
           </div>
         </section>
-        <section className="w-full flex flex-col px-3 py-15 gap-12 bg-dark-muted">
-          <div className="w-full flex flex-col justify-between gap-12">
-            <h2 className="text-white text-h2 font-medium tracking-tight">訂製專屬於您的完美耳機</h2>
-            <p className="text-white font-normal">請於下方留下您的詳細資料與訂製需求，將有專人於 3 日內聯繫，此表單僅做為客服調查，不等同於完成訂製商品。</p>
-          </div>
-          <div className="w-full flex flex-col gap-6 justify-between">
-            <input type="text" className="w-full border h-14 rounded-sm border-[#DEE2E6] text-white placeholder:text-white pl-3" placeholder="姓氏"/>
-            <input type="text" className="w-full border h-14 rounded-sm border-[#DEE2E6] text-white placeholder:text-white pl-3" placeholder="名字"/>
-            <input type="email" className="w-full border h-14 rounded-sm border-[#DEE2E6] text-white placeholder:text-white pl-3" placeholder="信箱"/>
-            <input type="phone" className="w-full border h-14 rounded-sm border-[#DEE2E6] text-white placeholder:text-white pl-3" placeholder="連絡電話"/>
-            <button type="button" className="w-full h-14 bg-white text-dark rounded-sm hover:bg-dark hover:text-white">送出表單</button>
-          </div>
-          <div className="w-full flex gap-4">
-            <div className="w-full flex flex-col gap-4 mt-12">
-              <img src={form_p_1} alt="p1" className="w-[168px] h-[168px] aspect-square object-cover" />
-              <img src={form_p_3} alt="p3" className="w-[168px] h-[168px] aspect-square object-cover" />
+        <section className="w-full flex flex-col px-3 py-15 gap-6 bg-dark-muted lg:flex-row-reverse lg:items-center lg:justify-center lg:px-[312px] lg:py-[70px]">
+          <div className="flex flex-col gap-12 w-full">
+            <div className="w-full flex flex-col gap-12 lg:gap-6 lg:items-center">
+              <h2 className="text-white text-h2 font-medium tracking-tight">
+                訂製專屬於您的完美耳機
+              </h2>
+              <p className="text-white font-normal">
+                請於下方留下您的詳細資料與訂製需求，將有專人於 3
+                日內聯繫，此表單僅做為客服調查，不等同於完成訂製商品。
+              </p>
             </div>
-            <div className="w-full flex flex-col gap-4">
-              <img src={form_p_2} alt="p2" className="w-[168px] h-[168px] aspect-square object-cover" />
-              <img src={form_p_4} alt="p4" className="w-[168px] h-[168px] aspect-square object-cover" />
+            <div className="w-full flex flex-col gap-6 justify-between">
+              <div className="flex flex-col gap-1">
+                <p className="hidden lg:block text-white">姓氏</p>
+                <input
+                  type="text"
+                  className={`w-full border h-14 rounded-sm border-[#DEE2E6] text-white ${
+                    isDesktop
+                      ? "placeholder:text-[#ACACAC]"
+                      : "placeholder:text-white"
+                  } pl-3`}
+                  placeholder={isDesktop ? "請輸入姓氏" : "姓氏"}
+                />
+              </div>
+              <div className="flex flex-col gap-1">
+                <p className="hidden lg:block text-white">名字</p>
+                <input
+                  type="text"
+                  className={`w-full border h-14 rounded-sm border-[#DEE2E6] text-white ${
+                    isDesktop
+                      ? "placeholder:text-[#ACACAC]"
+                      : "placeholder:text-white"
+                  } pl-3`}
+                  placeholder={isDesktop ? "請輸入名字" : "名字"}
+                />
+              </div>
+              <div className="flex flex-col gap-1">
+                <p className="hidden lg:block text-white">信箱</p>
+                <input
+                  type="email"
+                  className={`w-full border h-14 rounded-sm border-[#DEE2E6] text-white ${
+                    isDesktop
+                      ? "placeholder:text-[#ACACAC]"
+                      : "placeholder:text-white"
+                  } pl-3`}
+                  placeholder={isDesktop ? "請輸入信箱" : "信箱"}
+                />
+              </div>
+              <div className="flex flex-col gap-1">
+                <p className="hidden lg:block text-white">聯絡電話</p>
+                <input
+                  type="phone"
+                  className={`w-full border h-14 rounded-sm border-[#DEE2E6] text-white ${
+                    isDesktop
+                      ? "placeholder:text-[#ACACAC]"
+                      : "placeholder:text-white"
+                  } pl-3`}
+                  placeholder={isDesktop ? "請輸入聯絡電話" : "聯絡電話"}
+                />
+              </div>
+
+              <button
+                type="button"
+                className="w-full h-14 bg-white text-dark rounded-sm hover:bg-dark hover:text-white lg:w-[88px] lg:h-9 lg:self-end"
+              >
+                送出表單
+              </button>
             </div>
           </div>
 
+          <div className="w-full flex gap-4">
+            <div className="w-full flex flex-col gap-4 mt-12">
+              <img
+                src={form_p_1}
+                alt="p1"
+                className="w-[168px] h-[168px] aspect-square object-cover lg:w-[306px] lg:h-[306px]"
+              />
+              <img
+                src={form_p_3}
+                alt="p3"
+                className="w-[168px] h-[168px] aspect-square object-cover lg:w-[306px] lg:h-[306px]"
+              />
+            </div>
+            <div className="w-full flex flex-col gap-4">
+              <img
+                src={form_p_2}
+                alt="p2"
+                className="w-[168px] h-[168px] aspect-square object-cover lg:w-[306px] lg:h-[306px]"
+              />
+              <img
+                src={form_p_4}
+                alt="p4"
+                className="w-[168px] h-[168px] aspect-square object-cover lg:w-[306px] lg:h-[306px]"
+              />
+            </div>
+          </div>
         </section>
       </main>
     </>
