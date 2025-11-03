@@ -371,7 +371,7 @@ function App() {
               <img src={fb} alt="facebook" className="w-6 h-6 object-cover" />
             </div>
           </section>
-          <span className="bg-white h-px w-25 my-12" />
+          <span className="hidden lg:block bg-white h-px w-25 my-12" />
           <section className="flex flex-col lg:flex-row lg:w-full lg:justify-between">
             <section className="flex justify-between max-w-60 mb-10 lg:gap-6">
               <a href="#" className="text-white font-normal">
