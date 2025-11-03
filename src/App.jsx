@@ -44,8 +44,15 @@ function App() {
                 className="w-14 h-14 object-cover"
               />
             </button>
-            <button type="button" className="flex lg:hidden w-14 h-14 items-center justify-center">
-              <img src={menu_icon} alt="menu" className="w-6 h-6 object-cover"/>
+            <button
+              type="button"
+              className="flex lg:hidden w-14 h-14 items-center justify-center"
+            >
+              <img
+                src={menu_icon}
+                alt="menu"
+                className="w-6 h-6 object-cover"
+              />
             </button>
           </section>
         </header>
