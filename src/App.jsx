@@ -14,6 +14,10 @@ import item_5 from "./assets/img/phone-pic/item-sm-5.jpg";
 import item_6 from "./assets/img/phone-pic/item-sm-6.jpg";
 import item_7 from "./assets/img/phone-pic/item-sm-7.jpg";
 import sm_bg from "./assets/img/phone-pic/bg-sm.png";
+import form_p_1 from "./assets/img/p-1.jpg";
+import form_p_2 from "./assets/img/p-2.jpg";
+import form_p_3 from "./assets/img/p-3.jpg";
+import form_p_4 from "./assets/img/p-4.jpg";
 function App() {
   return (
     <>
@@ -236,6 +240,30 @@ function App() {
               />
             </div>
           </div>
+        </section>
+        <section className="w-full flex flex-col px-3 py-15 gap-12 bg-dark-muted">
+          <div className="w-full flex flex-col justify-between gap-12">
+            <h2 className="text-white text-h2 font-medium tracking-tight">訂製專屬於您的完美耳機</h2>
+            <p className="text-white font-normal">請於下方留下您的詳細資料與訂製需求，將有專人於 3 日內聯繫，此表單僅做為客服調查，不等同於完成訂製商品。</p>
+          </div>
+          <div className="w-full flex flex-col gap-6 justify-between">
+            <input type="text" className="w-full border h-14 rounded-sm border-[#DEE2E6] text-white placeholder:text-white pl-3" placeholder="姓氏"/>
+            <input type="text" className="w-full border h-14 rounded-sm border-[#DEE2E6] text-white placeholder:text-white pl-3" placeholder="名字"/>
+            <input type="email" className="w-full border h-14 rounded-sm border-[#DEE2E6] text-white placeholder:text-white pl-3" placeholder="信箱"/>
+            <input type="phone" className="w-full border h-14 rounded-sm border-[#DEE2E6] text-white placeholder:text-white pl-3" placeholder="連絡電話"/>
+            <button type="button" className="w-full h-14 bg-white text-dark rounded-sm hover:bg-dark hover:text-white">送出表單</button>
+          </div>
+          <div className="w-full flex gap-4">
+            <div className="w-full flex flex-col gap-4 mt-12">
+              <img src={form_p_1} alt="p1" className="w-[168px] h-[168px] aspect-square object-cover" />
+              <img src={form_p_3} alt="p3" className="w-[168px] h-[168px] aspect-square object-cover" />
+            </div>
+            <div className="w-full flex flex-col gap-4">
+              <img src={form_p_2} alt="p2" className="w-[168px] h-[168px] aspect-square object-cover" />
+              <img src={form_p_4} alt="p4" className="w-[168px] h-[168px] aspect-square object-cover" />
+            </div>
+          </div>
+
         </section>
       </main>
     </>
