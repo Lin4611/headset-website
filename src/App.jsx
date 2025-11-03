@@ -6,6 +6,14 @@ import banner from "./assets/img/lg-banner.jpg";
 import p_1 from "./assets/img/phone-pic/new-sm-1.png";
 import p_2 from "./assets/img/phone-pic/new-sm-2.png";
 import p_3 from "./assets/img/phone-pic/new-sm-3.png";
+import item_1 from "./assets/img/phone-pic/item-sm-1.jpg";
+import item_2 from "./assets/img/phone-pic/item-sm-2.jpg";
+import item_3 from "./assets/img/phone-pic/item-sm-3.jpg";
+import item_4 from "./assets/img/phone-pic/item-sm-4.jpg";
+import item_5 from "./assets/img/phone-pic/item-sm-5.jpg";
+import item_6 from "./assets/img/phone-pic/item-sm-6.jpg";
+import item_7 from "./assets/img/phone-pic/item-sm-7.jpg";
+import sm_bg from "./assets/img/phone-pic/bg-sm.png";
 function App() {
   return (
     <>
@@ -130,6 +138,58 @@ function App() {
               />
               <p className="w-full font-medium text-white p-2">INEAR PRO I</p>
             </figure>
+          </div>
+        </section>
+        <section
+          className="flex w-full flex-col gap-12 py-15 px-3 bg-no-repeat bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${sm_bg})`,
+          }}
+        >
+          <div className="w-full flex flex-col gap-2">
+            <h2 className="text-h2 text-white font-medium tracking-[2px] leading-tight">
+              多色選擇，專屬你的與眾不同
+            </h2>
+            <p className="text-white font-normal tracking-[2px] leading-normal">
+              我的風格我主張，獨創品牌限定色，除了耀眼更要獨一無二
+            </p>
+          </div>
+          <div className="flex flex-col w-full gap-6">
+            <img
+              src={item_1}
+              alt="item1"
+              className="w-full h-[202px] object-cover"
+            />
+            <img
+              src={item_2}
+              alt="item2"
+              className="w-full h-[250px] object-cover"
+            />
+            <img
+              src={item_3}
+              alt="item3"
+              className="w-full h-[250px] object-cover"
+            />
+            <img
+              src={item_4}
+              alt="item4"
+              className="w-full h-[202px] object-cover"
+            />
+            <img
+              src={item_5}
+              alt="item5"
+              className="w-full h-[219px] object-cover"
+            />
+            <img
+              src={item_6}
+              alt="item6"
+              className="w-full h-[219px] object-cover"
+            />
+            <img
+              src={item_7}
+              alt="item7"
+              className="w-full h-[219px] object-cover"
+            />
           </div>
         </section>
       </main>
