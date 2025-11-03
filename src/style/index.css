@@ -5,3 +5,6 @@ body {
   font-family: var(--font-NotoSans);
   font-size: var(--text-h6);
 }
+@layer utilities {
+  .bg-hero { background-image: var(--hero-desktop); }
+}
