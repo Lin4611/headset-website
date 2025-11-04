@@ -33,58 +33,54 @@ function App() {
   }, []);
   return (
     <>
+      <header className="w-full flex items-center py-4 px-3 justify-between lg:px-20 lg:py-6 ">
+        <img
+          src={logo}
+          alt="logo"
+          className="w-[88px] h-[33px] object-cover brightness-0"
+        />
+        <nav className="hidden lg:flex items-center justify-between gap-12">
+          <div className="max-w-[62px] h-10 justify-center items-center p-2 hover:border-b">
+            <a href="#" className="leading-1.5 font-normal">
+              首頁
+            </a>
+          </div>
+          <div className="flex h-10 justify-center items-center p-2 hover:border-b">
+            <a href="#" className="leading-1.5 font-normal">
+              最新消息
+            </a>
+          </div>
+          <div className="flex h-10 justify-center items-center p-2 hover:border-b">
+            <a href="#" className="leading-1.5 font-normal">
+              商品列表
+            </a>
+          </div>
+          <div className="flex h-10 justify-center items-center p-2 hover:border-b">
+            <a href="#" className="leading-1.5 font-normal">
+              關於我們
+            </a>
+          </div>
+        </nav>
+        <section className="flex items-center justify-between">
+          <button
+            type="button"
+            className="w-14 h-14 flex items-center justify-center"
+          >
+            <img
+              src={search_icon}
+              alt="search"
+              className="w-14 h-14 object-cover"
+            />
+          </button>
+          <button
+            type="button"
+            className="flex lg:hidden w-14 h-14 items-center justify-center"
+          >
+            <img src={menu_icon} alt="menu" className="w-6 h-6 object-cover" />
+          </button>
+        </section>
+      </header>
       <main className="mx-auto max-w-[1920px] w-full">
-        <header className="w-full flex items-center py-4 px-3 justify-between lg:px-20 lg:py-6 ">
-          <img
-            src={logo}
-            alt="logo"
-            className="w-[88px] h-[33px] object-cover brightness-0"
-          />
-          <nav className="hidden lg:flex items-center justify-between gap-12">
-            <div className="max-w-[62px] h-10 justify-center items-center p-2 hover:border-b">
-              <a href="#" className="leading-1.5 font-normal">
-                首頁
-              </a>
-            </div>
-            <div className="flex h-10 justify-center items-center p-2 hover:border-b">
-              <a href="#" className="leading-1.5 font-normal">
-                最新消息
-              </a>
-            </div>
-            <div className="flex h-10 justify-center items-center p-2 hover:border-b">
-              <a href="#" className="leading-1.5 font-normal">
-                商品列表
-              </a>
-            </div>
-            <div className="flex h-10 justify-center items-center p-2 hover:border-b">
-              <a href="#" className="leading-1.5 font-normal">
-                關於我們
-              </a>
-            </div>
-          </nav>
-          <section className="flex items-center justify-between">
-            <button
-              type="button"
-              className="w-14 h-14 flex items-center justify-center"
-            >
-              <img
-                src={search_icon}
-                alt="search"
-                className="w-14 h-14 object-cover"
-              />
-            </button>
-            <button
-              type="button"
-              className="flex lg:hidden w-14 h-14 items-center justify-center"
-            >
-              <img
-                src={menu_icon}
-                alt="menu"
-                className="w-6 h-6 object-cover"
-              />
-            </button>
-          </section>
-        </header>
         <section className="flex lg:hidden w-full bg-dark py-12 h-[610px] relative">
           <img
             src={sm_banner}
@@ -103,8 +99,9 @@ function App() {
             </div>
           </div>
         </section>
-        <section className="hidden lg:flex w-full bg-dark h-[634px] justify-end items-center bg-center bg-cover bg-no-repeat max-w-[1920px] "
-        style={{backgroundImage:`url(${banner})`}}
+        <section
+          className="hidden lg:flex w-full bg-dark h-[634px] justify-end items-center bg-center bg-cover bg-no-repeat max-w-[1920px] "
+          style={{ backgroundImage: `url(${banner})` }}
         >
           <div className="w-[636px] h-[139px] flex flex-col px-3 gap-4 mr-[312px]">
             <h2 className="text-h1 font-medium text-white">INEAR PRO MAX</h2>
@@ -212,54 +209,54 @@ function App() {
               className="w-full h-[219px] object-cover"
             />
           </div>
-          <div className="hidden lg:flex w-full h-[706px] gap-6">
-            <div className="flex flex-col gap-6 w-full">
+          <div className="hidden lg:flex w-full gap-6 max-w-[1076px] max-h-[706px]">
+            <div className="flex flex-col justify-between gap-6 w-full">
               <div className="flex justify-between gap-6 w-full max-w-[636px]">
                 <img
                   src={item_1}
                   alt="item1"
-                  className="w-full h-full max-w-[306px] max-h-[306px] object-cover"
+                  className="w-full h-full max-w-[306px] max-h-[306px] aspect-auto object-cover"
                 />
                 <div className="flex flex-col w-full gap-6">
                   <img
                     src={item_2}
-                    alt="item1"
-                    className="w-full h-full max-w-[306px] max-h-[141px] object-cover"
+                    alt="item2"
+                    className="w-full h-full max-w-[306px] max-h-[141px] aspect-auto object-cover"
                   />
                   <img
                     src={item_3}
-                    alt="item1"
-                    className="w-full h-full max-w-[306px] max-h-[141px] object-cover"
+                    alt="item3"
+                    className="w-full h-full max-w-[306px] max-h-[141px] aspect-auto object-cover"
                   />
                 </div>
               </div>
               <img
                 src={item_4}
                 alt="item4"
-                className="w-full h-full max-w-[636px] max-h-[376px] object-cover"
+                className="w-full h-full max-w-[636px] max-h-[376px] aspect-auto object-cover"
               />
             </div>
-            <div className="flex flex-col justify-between items-center w-full gap-6 max-w-[416px]">
+            <div className="flex flex-col justify-between items-center w-full  max-w-[416px]">
               <img
                 src={item_5}
-                alt=""
-                className="w-full h-full object-cover max-w-[416px] max-h-[219px]"
+                alt="item5"
+                className="w-full h-full object-cover max-w-[416px] max-h-[219px] aspect-auto"
               />
               <img
                 src={item_6}
-                alt=""
-                className="w-full h-full object-cover max-w-[416px] max-h-[219px]"
+                alt="item6"
+                className="w-full h-full object-cover max-w-[416px] max-h-[219px] aspect-auto"
               />
               <img
                 src={item_7}
-                alt=""
-                className="w-full h-full object-cover max-w-[416px] max-h-[219px]"
+                alt="item7"
+                className="w-full h-full object-cover max-w-[416px] max-h-[219px] aspect-auto"
               />
             </div>
           </div>
         </section>
-        <section className="w-full flex flex-col px-3 py-15 gap-6 bg-dark-muted lg:flex-row-reverse lg:items-center lg:justify-center lg:px-[312px] lg:py-[70px]">
-          <div className="flex flex-col gap-12 w-full">
+        <section className="w-full flex flex-col px-3 py-15 gap-6 bg-dark-muted items-center justify-center  lg:flex-row-reverse lg:py-[70px]">
+          <div className="flex flex-col gap-12 w-full max-w-[351px] lg:max-w-[636px]">
             <div className="w-full flex flex-col gap-12 lg:gap-6 lg:items-center">
               <h2 className="text-white text-h2 font-medium tracking-tight">
                 訂製專屬於您的完美耳機
@@ -328,8 +325,8 @@ function App() {
             </div>
           </div>
 
-          <div className="w-full flex gap-4">
-            <div className="w-full flex flex-col gap-4 mt-12">
+          <div className="w-full flex gap-4 max-w-[352px] items-center justify-center lg:max-w-[636px]">
+            <div className="w-full flex flex-col gap-4 mt-12 items-end justify-center">
               <img
                 src={form_p_1}
                 alt="p1"
@@ -341,7 +338,7 @@ function App() {
                 className="w-[168px] h-[168px] aspect-square object-cover lg:w-[306px] lg:h-[306px]"
               />
             </div>
-            <div className="w-full flex flex-col gap-4">
+            <div className="w-full flex flex-col gap-4 items-start justify-center">
               <img
                 src={form_p_2}
                 alt="p2"
@@ -355,40 +352,36 @@ function App() {
             </div>
           </div>
         </section>
-        <footer className="w-full flex flex-col bg-dark py-15 gap-6 px-3 lg:items-center lg:justify-center lg:px-[312px]">
-          <section className="w-full flex flex-col gap-6 lg:items-center lg:justify-between">
-            <img src={logo} alt="logo" className="w-40 h-[66px] object-cover" />
-            <div className="flex justify-between max-w-[152px] lg:gap-6">
-              <img
-                src={twitter}
-                alt="twitter"
-                className="w-6 h-6 object-cover"
-              />
-              <img src={ig} alt="instagram" className="w-6 h-6 object-cover" />
-              <img src={fb} alt="facebook" className="w-6 h-6 object-cover" />
-            </div>
-          </section>
-          <span className="hidden lg:block bg-white h-px w-25 my-12" />
-          <section className="flex flex-col lg:flex-row lg:w-full lg:justify-between">
-            <section className="flex justify-between max-w-60 mb-10 lg:gap-6">
-              <a href="#" className="text-white font-normal">
-                最新商品
-              </a>
-              <a href="#" className="text-white font-normal">
-                多色選擇
-              </a>
-              <a href="#" className="text-white font-normal">
-                訂製耳機
-              </a>
-            </section>
-            <section className="block">
-              <p className="text-white font-normal">
-                © WEBNAME 2024 All right Reserved
-              </p>
-            </section>
-          </section>
-        </footer>
       </main>
+      <footer className="w-full flex flex-col bg-dark py-15 gap-6 px-3 lg:items-center lg:justify-center lg:px-[312px]">
+        <section className="w-full flex flex-col gap-6 lg:items-center lg:justify-between">
+          <img src={logo} alt="logo" className="w-40 h-[66px] object-cover" />
+          <div className="flex justify-between max-w-[152px] lg:gap-6">
+            <img src={twitter} alt="twitter" className="w-6 h-6 object-cover" />
+            <img src={ig} alt="instagram" className="w-6 h-6 object-cover" />
+            <img src={fb} alt="facebook" className="w-6 h-6 object-cover" />
+          </div>
+        </section>
+        <span className="hidden lg:block bg-white h-px w-25 my-12" />
+        <section className="flex flex-col lg:flex-row lg:w-full lg:justify-between">
+          <section className="flex justify-between max-w-60 mb-10 lg:gap-6">
+            <a href="#" className="text-white font-normal">
+              最新商品
+            </a>
+            <a href="#" className="text-white font-normal">
+              多色選擇
+            </a>
+            <a href="#" className="text-white font-normal">
+              訂製耳機
+            </a>
+          </section>
+          <section className="block">
+            <p className="text-white font-normal">
+              © WEBNAME 2024 All right Reserved
+            </p>
+          </section>
+        </section>
+      </footer>
     </>
   );
 }
